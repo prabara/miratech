@@ -117,7 +117,7 @@ ${clientMessage.trim()}`;
 			<!-- Hero Text -->
 			<div class="lg:col-span-7 flex flex-col items-start text-left scroll-reveal transition-all duration-700 opacity-0 translate-y-10">
 				<!-- Tagline / Badge -->
-				<span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide text-primary bg-blue-50 dark:bg-blue-950/40 dark:text-accent border border-blue-100 dark:border-blue-900 mb-6">
+				<span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide text-primary bg-blue-100 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 mb-6 dark:text-accent">
 					<span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
 					Solusi Teknologi Terbaik untuk Bisnis Anda
 				</span>
@@ -179,7 +179,7 @@ ${clientMessage.trim()}`;
 				<!-- Decorative backdrop glow -->
 				<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-2xl -z-10"></div>
 				<!-- Real rendered illustration from generative AI -->
-				<div class="relative overflow-hidden rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl glass p-2 hover:scale-[1.02] transition-transform duration-500">
+				<div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-lg dark:shadow-2xl glass p-2 hover:scale-[1.02] transition-transform duration-500">
 					<img
 						src="/hero_illustration.jpg"
 						alt="Miratech Technology Services - Software, CCTV, and Computer Repairs"
@@ -309,7 +309,7 @@ ${clientMessage.trim()}`;
 						href="{baseWaUrl}?text={encodeURIComponent('Halo Miratech, saya butuh bantuan teknisi untuk Perbaikan Komputer & Laptop.')}"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn-ripple w-full py-3.5 px-6 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2 dark:bg-slate-700 dark:hover:bg-slate-600"
+						class="btn-ripple w-full py-3.5 px-6 rounded-xl bg-primary hover:bg-blue-700 text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2"
 						id="service-cta-2"
 					>
 						Hubungi Teknisi
@@ -362,7 +362,7 @@ ${clientMessage.trim()}`;
 						href="{baseWaUrl}?text={encodeURIComponent('Halo Miratech, saya ingin menjadwalkan survey untuk Pemasangan CCTV.')}"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn-ripple w-full py-3.5 px-6 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2 dark:bg-slate-700 dark:hover:bg-slate-600"
+						class="btn-ripple w-full py-3.5 px-6 rounded-xl bg-primary hover:bg-blue-700 text-white font-semibold text-center text-sm inline-flex items-center justify-center gap-2"
 						id="service-cta-3"
 					>
 						Jadwalkan Survey
@@ -866,7 +866,7 @@ ${clientMessage.trim()}`;
 		<!-- FAQ Accordion -->
 		<div class="flex flex-col gap-4 scroll-reveal transition-all duration-700 opacity-0 translate-y-10">
 			<!-- FAQ Item 1 -->
-			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 0 ? 'bg-slate-50/50 dark:bg-slate-900/30' : 'bg-transparent'}">
+			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 0 ? 'bg-slate-100/50 dark:bg-slate-900/30' : 'bg-white dark:bg-transparent'}">
 				<button 
 					onclick={() => toggleFaq(0)} 
 					class="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
@@ -882,7 +882,7 @@ ${clientMessage.trim()}`;
 			</div>
 
 			<!-- FAQ Item 2 -->
-			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 1 ? 'bg-slate-50/50 dark:bg-slate-900/30' : 'bg-transparent'}">
+			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 1 ? 'bg-slate-100/50 dark:bg-slate-900/30' : 'bg-white dark:bg-transparent'}">
 				<button 
 					onclick={() => toggleFaq(1)} 
 					class="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
@@ -898,7 +898,7 @@ ${clientMessage.trim()}`;
 			</div>
 
 			<!-- FAQ Item 3 -->
-			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 2 ? 'bg-slate-50/50 dark:bg-slate-900/30' : 'bg-transparent'}">
+			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 2 ? 'bg-slate-100/50 dark:bg-slate-900/30' : 'bg-white dark:bg-transparent'}">
 				<button 
 					onclick={() => toggleFaq(2)} 
 					class="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
@@ -914,7 +914,7 @@ ${clientMessage.trim()}`;
 			</div>
 
 			<!-- FAQ Item 4 -->
-			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 3 ? 'bg-slate-50/50 dark:bg-slate-900/30' : 'bg-transparent'}">
+			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 3 ? 'bg-slate-100/50 dark:bg-slate-900/30' : 'bg-white dark:bg-transparent'}">
 				<button 
 					onclick={() => toggleFaq(3)} 
 					class="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
@@ -930,7 +930,7 @@ ${clientMessage.trim()}`;
 			</div>
 
 			<!-- FAQ Item 5 -->
-			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 4 ? 'bg-slate-50/50 dark:bg-slate-900/30' : 'bg-transparent'}">
+			<div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-all {activeFaqIndex === 4 ? 'bg-slate-100/50 dark:bg-slate-900/30' : 'bg-white dark:bg-transparent'}">
 				<button 
 					onclick={() => toggleFaq(4)} 
 					class="w-full px-6 py-5 text-left flex justify-between items-center gap-4"
@@ -999,7 +999,7 @@ ${clientMessage.trim()}`;
 							id="name"
 							bind:value={clientName}
 							placeholder="Masukkan nama lengkap Anda"
-							class="mt-2 w-full px-4 py-3 rounded-xl border {errors.name ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-transparent text-sm focus:ring-2 focus:outline-none dark:text-white"
+							class="mt-2 w-full px-4 py-3 rounded-xl border {errors.name ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white text-sm focus:ring-2 focus:outline-none placeholder:text-slate-500 dark:placeholder:text-slate-400"
 						/>
 						{#if errors.name}
 							<p class="mt-1 text-xs text-red-500">{errors.name}</p>
@@ -1015,7 +1015,7 @@ ${clientMessage.trim()}`;
 								id="whatsapp"
 								bind:value={clientWhatsApp}
 								placeholder="Contoh: 081255556666"
-								class="mt-2 w-full px-4 py-3 rounded-xl border {errors.whatsapp ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-transparent text-sm focus:ring-2 focus:outline-none dark:text-white"
+								class="mt-2 w-full px-4 py-3 rounded-xl border {errors.whatsapp ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white text-sm focus:ring-2 focus:outline-none placeholder:text-slate-500 dark:placeholder:text-slate-400"
 							/>
 							{#if errors.whatsapp}
 								<p class="mt-1 text-xs text-red-500">{errors.whatsapp}</p>
@@ -1028,7 +1028,7 @@ ${clientMessage.trim()}`;
 								id="email"
 								bind:value={clientEmail}
 								placeholder="Contoh: nama@domain.com"
-								class="mt-2 w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-primary focus:border-primary bg-transparent text-sm focus:ring-2 focus:outline-none dark:text-white focus:ring-blue-500/20"
+								class="mt-2 w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-primary focus:border-primary bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white text-sm focus:ring-2 focus:outline-none placeholder:text-slate-500 dark:placeholder:text-slate-400 focus:ring-blue-500/20"
 							/>
 						</div>
 					</div>
@@ -1056,7 +1056,7 @@ ${clientMessage.trim()}`;
 							bind:value={clientMessage}
 							rows="4"
 							placeholder="Jelaskan kebutuhan software atau kendala hardware Anda..."
-							class="mt-2 w-full px-4 py-3 rounded-xl border {errors.message ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-transparent text-sm focus:ring-2 focus:outline-none dark:text-white"
+							class="mt-2 w-full px-4 py-3 rounded-xl border {errors.message ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : 'border-slate-200 focus:ring-primary focus:border-primary dark:border-slate-800'} bg-white dark:bg-slate-900/50 text-slate-900 dark:text-white text-sm focus:ring-2 focus:outline-none placeholder:text-slate-500 dark:placeholder:text-slate-400 resize-none"
 						></textarea>
 						{#if errors.message}
 							<p class="mt-1 text-xs text-red-500">{errors.message}</p>
