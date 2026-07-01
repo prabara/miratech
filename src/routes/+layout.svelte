@@ -73,22 +73,24 @@
 	<!-- Header Navigation -->
 	<header
 		id="header"
-		class="fixed top-0 left-0 z-50 w-full transition-all duration-300 {isScrolled ? 'glass shadow-md py-3' : 'bg-transparent py-5'}"
+		class="fixed z-50 w-full transition-all duration-500 {isScrolled ? 'top-3 px-4' : 'top-0 px-0'}"
 	>
-		<div class="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+		<div 
+			class="mx-auto transition-all duration-500 {isScrolled ? 'glass-nav max-w-6xl rounded-2xl shadow-lg border border-slate-200/50 dark:border-slate-800/40 py-2.5 px-6' : 'max-w-7xl bg-transparent py-5 px-4 sm:px-6 lg:px-8'} flex items-center justify-between"
+		>
 			<!-- Logo -->
 			<a href="#beranda" onclick={(e) => { e.preventDefault(); scrollToSection('beranda'); }} class="flex items-center gap-2">
-				<img src={logo} alt="Miratech Logo" class="h-10 w-auto transition-transform duration-300 hover:scale-105" />
+				<img src={logo} alt="Miratech Logo" class="h-9 w-auto transition-transform duration-300 hover:scale-105" />
 			</a>
 
 			<!-- Desktop Nav Menu -->
 			<nav class="hidden md:flex items-center gap-8">
-				<a href="#beranda" onclick={(e) => { e.preventDefault(); scrollToSection('beranda'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Beranda</a>
-				<a href="#layanan" onclick={(e) => { e.preventDefault(); scrollToSection('layanan'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Layanan</a>
-				<a href="#mengapa-kami" onclick={(e) => { e.preventDefault(); scrollToSection('mengapa-kami'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Mengapa Kami</a>
-				<a href="#portfolio" onclick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Portfolio</a>
-				<a href="#testimoni" onclick={(e) => { e.preventDefault(); scrollToSection('testimoni'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Testimoni</a>
-				<a href="#kontak" onclick={(e) => { e.preventDefault(); scrollToSection('kontak'); }} class="text-sm font-semibold text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors">Kontak</a>
+				<a href="#beranda" onclick={(e) => { e.preventDefault(); scrollToSection('beranda'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
+				<a href="#layanan" onclick={(e) => { e.preventDefault(); scrollToSection('layanan'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Layanan</a>
+				<a href="#mengapa-kami" onclick={(e) => { e.preventDefault(); scrollToSection('mengapa-kami'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Mengapa Kami</a>
+				<a href="#portfolio" onclick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Portfolio</a>
+				<a href="#testimoni" onclick={(e) => { e.preventDefault(); scrollToSection('testimoni'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Testimoni</a>
+				<a href="#kontak" onclick={(e) => { e.preventDefault(); scrollToSection('kontak'); }} class="text-sm font-semibold text-slate-600 hover:text-primary dark:text-slate-350 dark:hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full">Kontak</a>
 			</nav>
 
 			<!-- Right Controls -->
@@ -96,17 +98,19 @@
 				<!-- Dark Mode Toggle -->
 				<button
 					onclick={toggleDarkMode}
-					class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+					class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:scale-105 active:scale-95 transition-all duration-300 relative overflow-hidden group cursor-pointer"
 					aria-label="Toggle Dark Mode"
 					id="dark-mode-toggle-desktop"
 				>
-					{#if darkMode}
-						<!-- Sun icon -->
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
-					{:else}
-						<!-- Moon icon -->
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-					{/if}
+					<div class="transition-transform duration-500 group-hover:rotate-45">
+						{#if darkMode}
+							<!-- Sun icon -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.4)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+						{:else}
+							<!-- Moon icon -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+						{/if}
+					</div>
 				</button>
 
 				<!-- CTA Button -->
@@ -114,7 +118,7 @@
 					href={waLink}
 					target="_blank"
 					rel="noopener noreferrer"
-					class="btn-ripple bg-primary hover:bg-blue-700 text-white font-semibold text-sm px-6 py-2.5 rounded-xl inline-flex items-center justify-center"
+					class="btn-ripple bg-primary hover:bg-blue-600 text-white font-semibold text-sm px-6 py-2.5 rounded-xl inline-flex items-center justify-center shadow-md shadow-blue-500/10 dark:shadow-none"
 					id="cta-nav-desktop"
 				>
 					Konsultasi Gratis
@@ -126,12 +130,12 @@
 				<!-- Dark Mode Toggle -->
 				<button
 					onclick={toggleDarkMode}
-					class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300"
+					class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:scale-105 active:scale-95 transition-all duration-300"
 					aria-label="Toggle Dark Mode"
 					id="dark-mode-toggle-mobile"
 				>
 					{#if darkMode}
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-400 drop-shadow-[0_0_6px_rgba(251,191,36,0.4)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
 					{:else}
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
 					{/if}
@@ -140,7 +144,7 @@
 				<!-- Hamburger Menu Button -->
 				<button
 					onclick={() => isMobileMenuOpen = !isMobileMenuOpen}
-					class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300"
+					class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 active:scale-95 transition-transform"
 					aria-label="Toggle Menu"
 					id="mobile-menu-trigger"
 				>
@@ -157,20 +161,20 @@
 
 		<!-- Mobile Nav Panel -->
 		{#if isMobileMenuOpen}
-			<div class="md:hidden glass border-t border-slate-200 dark:border-slate-800 py-4 px-6 animate-fade-up">
+			<div class="md:hidden glass rounded-2xl border border-slate-200/80 dark:border-slate-800/80 mt-2 py-4 px-6 shadow-xl animate-fade-up mx-4">
 				<nav class="flex flex-col gap-4">
-					<a href="#beranda" onclick={(e) => { e.preventDefault(); scrollToSection('beranda'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Beranda</a>
-					<a href="#layanan" onclick={(e) => { e.preventDefault(); scrollToSection('layanan'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Layanan</a>
-					<a href="#mengapa-kami" onclick={(e) => { e.preventDefault(); scrollToSection('mengapa-kami'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Mengapa Kami</a>
-					<a href="#portfolio" onclick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Portfolio</a>
-					<a href="#testimoni" onclick={(e) => { e.preventDefault(); scrollToSection('testimoni'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Testimoni</a>
-					<a href="#kontak" onclick={(e) => { e.preventDefault(); scrollToSection('kontak'); }} class="text-base font-semibold text-slate-700 dark:text-slate-300">Kontak</a>
-					<hr class="border-slate-200 dark:border-slate-800 my-1" />
+					<a href="#beranda" onclick={(e) => { e.preventDefault(); scrollToSection('beranda'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Beranda</a>
+					<a href="#layanan" onclick={(e) => { e.preventDefault(); scrollToSection('layanan'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Layanan</a>
+					<a href="#mengapa-kami" onclick={(e) => { e.preventDefault(); scrollToSection('mengapa-kami'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Mengapa Kami</a>
+					<a href="#portfolio" onclick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Portfolio</a>
+					<a href="#testimoni" onclick={(e) => { e.preventDefault(); scrollToSection('testimoni'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Testimoni</a>
+					<a href="#kontak" onclick={(e) => { e.preventDefault(); scrollToSection('kontak'); }} class="text-base font-semibold text-slate-700 dark:text-slate-350 hover:text-primary transition-colors">Kontak</a>
+					<hr class="border-slate-200 dark:border-slate-800/50 my-1" />
 					<a
 						href={waLink}
 						target="_blank"
 						rel="noopener noreferrer"
-						class="btn-ripple bg-primary hover:bg-blue-700 text-white text-center font-semibold text-sm px-6 py-3 rounded-xl flex items-center justify-center gap-2"
+						class="btn-ripple bg-primary hover:bg-blue-600 text-white text-center font-semibold text-sm px-6 py-3 rounded-xl flex items-center justify-center gap-2"
 						id="cta-nav-mobile"
 					>
 						<!-- WhatsApp SVG -->
@@ -188,21 +192,21 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+	<footer class="bg-slate-950 text-slate-400 pt-16 pb-8 border-t border-slate-200/50 dark:border-slate-800/40">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+			<div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-900/60 dark:border-slate-800/50">
 				<!-- Footer Brand -->
 				<div class="col-span-12 md:col-span-5 flex flex-col gap-4">
 					<div class="flex items-center gap-2">
 						<!-- Custom M logo SVG inline for the dark background of the footer -->
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-auto text-white" viewBox="0 0 240 80" fill="none">
 							<g transform="translate(10, 10)">
-								<path d="M5 50 L5 10 L25 35 L45 10 L45 50" stroke="#0066FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M15 50 L15 22.5 L25 35 L35 22.5 L35 50" stroke="#4F9DFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-								<circle cx="25" cy="35" r="3.5" fill="#FFFFFF" stroke="#0066FF" stroke-width="2" />
+								<path d="M5 50 L5 10 L25 35 L45 10 L45 50" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M15 50 L15 22.5 L25 35 L35 22.5 L35 50" stroke="#6366F1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+								<circle cx="25" cy="35" r="3.5" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
 							</g>
 							<text x="80" y="48" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="2">MIRATECH</text>
-							<text x="80" y="62" font-family="'Inter', system-ui, sans-serif" font-size="8" font-weight="600" fill="#4F9DFF" letter-spacing="3.5">TECHNOLOGY</text>
+							<text x="80" y="62" font-family="'Inter', system-ui, sans-serif" font-size="8" font-weight="600" fill="#6366F1" letter-spacing="3.5">TECHNOLOGY</text>
 						</svg>
 					</div>
 					<p class="text-sm leading-relaxed max-w-sm text-slate-400 mt-2">
@@ -231,7 +235,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 							<div>
 								<span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Email</span>
-								<a href="mailto:info@miratech.co.id" class="text-slate-300 hover:text-primary transition-colors">info@miratech.co.id</a>
+								<a href="mailto:info@miratech.co.id" class="text-slate-350 hover:text-primary transition-colors">info@miratech.co.id</a>
 							</div>
 						</li>
 						<li class="flex items-start gap-3">
@@ -239,7 +243,7 @@
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 							<div>
 								<span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">WhatsApp</span>
-								<a href="https://wa.me/6281255556666" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-primary transition-colors">+62 812-5555-6666</a>
+								<a href="https://wa.me/6281255556666" target="_blank" rel="noopener noreferrer" class="text-slate-350 hover:text-primary transition-colors">+62 812-5555-6666</a>
 							</div>
 						</li>
 						<li class="flex items-start gap-3">

@@ -6,9 +6,9 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#0066FF',
-				secondary: '#0A2540',
-				accent: '#4F9DFF'
+				primary: '#2563EB',
+				secondary: '#0A0F1D',
+				accent: '#6366F1'
 			},
 			fontFamily: {
 				sans: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
